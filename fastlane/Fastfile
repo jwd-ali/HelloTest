@@ -18,7 +18,7 @@ default_platform(:ios)
 TEST_DEVICE="iPhone 13"
 TEST_IOS_VERSION="15.0"
 
-PROJECT_SCHEME="MobileExercise"
+PROJECT_SCHEME="Test"
 DERIVED_DATA_PATH='./.DerivedData'
 
 default_platform(:ios)
@@ -27,7 +27,6 @@ platform :ios do
   desc "Test Project"
   lane :test do
     scan(
-      project: 'iOS\ Test/iOS\ Test.xcodeproj'
       scheme: PROJECT_SCHEME,
       clean: false,
       device: TEST_DEVICE,
