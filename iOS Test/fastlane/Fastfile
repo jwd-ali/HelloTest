@@ -27,6 +27,7 @@ platform :ios do
   desc "Test Project"
   lane :test do
     scan(
+      project: 'iOS\ Test/iOS\ Test.xcodeproj'
       scheme: PROJECT_SCHEME,
       clean: false,
       device: TEST_DEVICE,
