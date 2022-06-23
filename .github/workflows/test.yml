@@ -26,5 +26,12 @@ jobs:
       with:
         ruby-version: 2.6.5
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+    - name: Check spm cache for dependencies
+      uses: actions/cache@v2
+      with:
+        path: .build
+        key: ${{ runner.os }}-spm-${{ hashFiles('**/Package.resolved') }}
+        restore-keys: |
+          ${{ runner.os }}-spm-
     - name: Build and test
       run: bundle exec fastlane test
