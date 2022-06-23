@@ -18,7 +18,7 @@ default_platform(:ios)
 TEST_DEVICE="iPhone 13"
 TEST_IOS_VERSION="15.0"
 
-PROJECT_SCHEME="Test"
+PROJECT_SCHEME="iOS Test"
 DERIVED_DATA_PATH='./.DerivedData'
 
 default_platform(:ios)
