@@ -60,6 +60,9 @@ GEM
     danger-slather (0.0.6)
       danger-plugin-api (~> 1.0)
       slather (~> 2.3)
+    danger-xcov (0.5.0)
+      danger (>= 2.1)
+      xcov (>= 1.7.3)
     declarative (0.0.20)
     digest-crc (0.6.4)
       rake (>= 12.0.0, < 14.0.0)
@@ -238,6 +241,7 @@ GEM
     simctl (1.6.8)
       CFPropertyList
       naturally
+    slack-notifier (2.4.0)
     slather (2.7.2)
       CFPropertyList (>= 2.2, < 4)
       activesupport
@@ -268,10 +272,18 @@ GEM
       colored2 (~> 3.1)
       nanaimo (~> 0.3.0)
       rexml (~> 3.2.4)
+    xcov (1.8.1)
+      fastlane (>= 2.141.0, < 3.0.0)
+      multipart-post
+      slack-notifier
+      terminal-table
+      xcodeproj
+      xcresult (~> 0.2.0)
     xcpretty (0.3.0)
       rouge (~> 2.0.7)
     xcpretty-travis-formatter (1.0.1)
       xcpretty (~> 0.2, >= 0.0.7)
+    xcresult (0.2.1)
 
 PLATFORMS
   arm64-darwin-21
@@ -280,6 +292,7 @@ PLATFORMS
 DEPENDENCIES
   danger
   danger-slather
+  danger-xcov
   fastlane
   slather
 
