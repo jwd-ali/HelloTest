@@ -19,7 +19,6 @@ TEST_DEVICE="iPhone 13"
 TEST_IOS_VERSION="15.0"
 
 PROJECT_SCHEME="iOS Test"
-DERIVED_DATA_PATH='./.DerivedData'
 
 default_platform(:ios)
 
@@ -30,9 +29,7 @@ platform :ios do
       scheme: PROJECT_SCHEME,
       clean: false,
       device: TEST_DEVICE,
-      code_coverage: true,
-      derived_data_path: DERIVED_DATA_PATH,
-      cloned_source_packages_path: './.DerivedData/SourcePackages/checkouts'
+      code_coverage: true
     )
   end
 
