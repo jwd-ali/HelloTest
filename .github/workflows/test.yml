@@ -24,7 +24,7 @@ jobs:
         ssh-private-key: ${{ secrets.SSH_GITHUB_ACTIONS }}
     - uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 2.6.5
+        ruby-version: 3.0.0
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: Check spm cache for dependencies
       uses: actions/cache@v2
