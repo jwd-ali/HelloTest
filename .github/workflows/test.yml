@@ -35,7 +35,7 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-spm-
     - name: Build and test
-      run: bundle exec fastlane test
+      run: bundle exec fastlane test generate_xcodebuild_log:true
 
     - name: Check coverage
       run: bundle exec fastlane check_coverage
