@@ -1,0 +1,17 @@
+
+
+# Generate report
+ report = xcov.produce_report(
+   scheme: 'iOS Test',
+   minimum_coverage_percentage: 85.0,
+   ignore_file_path: '.xcovignore'
+ )
+
+ # Do some custom filtering with the report here
+
+ # Post markdown report
+ xcov.output_report(report)
+
+# For more information on how this works and how to display an error
+# instead of a warning and fail the PR, please check:
+# https://confluence.deliveryhero.com/x/XQb6Fg

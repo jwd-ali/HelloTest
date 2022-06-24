@@ -35,3 +35,6 @@ jobs:
           ${{ runner.os }}-spm-
     - name: Build and test
       run: bundle exec fastlane test
+
+    - name: Check coverage
+      run: bundle exec fastlane check_coverage
