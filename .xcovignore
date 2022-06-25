@@ -1,6 +1,6 @@
-- iOS Test/Utilities
-- iOS Test/ResponseModels
-- iOS Test/Extensions/Operations.swift
+- iOS\ Test/Utilities
+- iOS\ Test/ResponseModels
+- iOS\ Test/Extensions
 
 - .*Builder.swift
 - .*Factory.swift
@@ -8,8 +8,6 @@
 - .*Response.swift
 - .*Controller.swift
 - .*Cell.swift
-- .UIView**
-- .UITableView**
 - .*Event.swift
 - .*Router.swift
 - .*View.swift
