@@ -1,5 +1,6 @@
-- iOS\ Test/Utilities
-- iOS\ Test/ResponseModels
+- iOS Test/Utilities
+- iOS Test/ResponseModels
+- iOS Test/Extensions/Operations.swift
 
 - .*Builder.swift
 - .*Factory.swift
