@@ -12,4 +12,6 @@
 - .*Event.swift
 - .*Router.swift
 - .*View.swift
-- .Operations.swift
+- .*ViewModel.swift
+- .*Error.swift
+- .*Operations.swift
