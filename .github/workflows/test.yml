@@ -18,6 +18,8 @@ jobs:
     steps:
     - name: Check out repository
       uses: actions/checkout@v2
+      with:
+        fetch-depth: 100
     - name: Install XCPretty
       run: gem install xcpretty
     - uses: webfactory/ssh-agent@v0.4.1
