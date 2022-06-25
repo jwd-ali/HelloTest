@@ -17,3 +17,6 @@ end
 # For more information on how this works and how to display an error
 # instead of a warning and fail the PR, please check:
 # https://confluence.deliveryhero.com/x/XQb6Fg
+
+ # Post markdown report
+ xcov.output_report(report)
