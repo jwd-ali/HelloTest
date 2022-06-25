@@ -41,3 +41,6 @@ jobs:
 
     - name: Check coverage
       run: bundle exec fastlane check_coverage
+
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v2
