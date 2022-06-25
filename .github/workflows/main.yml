@@ -1,0 +1,28 @@
+name: Add default assignee
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  add_default_assignee:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/github-script@0.8.0
+      with:
+        github-token: "${{ secrets.DANGER_GITHUB_API_TOKEN }}"
+        script: |
+          const repo = { owner: context.issue.owner, repo: context.issue.repo}
+          const pull_request_response = await github.pulls.get({
+            ...repo,
+            pull_number: context.issue.number
+          });
+          const pull_request_data = pull_request_response.data
+          if (pull_request_data.assignee == null) {
+            await github.issues.addAssignees ({
+              ...repo,
+              issue_number: context.issue.number,
+              assignees: [pull_request_data.user.login]
+            })
+          }
