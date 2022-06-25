@@ -1,8 +1,10 @@
 # Generate report
+SCHEME = 'helloFresh'
  report = xcov.produce_report(
-   scheme: "helloFresh",
+   scheme: SCHEME,
    minimum_coverage_percentage: 85.0,
-   ignore_file_path: '.xcovignore'
+   ignore_file_path: '.xcovignore',
+   include_targets: SCHEME
  )
 
 
