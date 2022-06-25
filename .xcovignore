@@ -1,6 +1,7 @@
-- iOS\ Test/Utilities
-- iOS\ Test/ResponseModels
-- iOS\ Test/Extensions/UIImageView+Extension.swift
+- iOS Test/Utilities
+- iOS Test/ResponseModels
+- iOS Test/Extensions
+- iOS Test/Extensions/UIImageView+Extension.swift
 - iOS Test/Extensions/UITableView+CellRegistration.swift
 
 - .*Builder.swift
