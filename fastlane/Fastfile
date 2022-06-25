@@ -18,7 +18,7 @@ default_platform(:ios)
 TEST_DEVICE="iPhone 13"
 TEST_IOS_VERSION="15.0"
 
-PROJECT_SCHEME="iOS Test"
+PROJECT_SCHEME="helloFresh"
 
 default_platform(:ios)
 

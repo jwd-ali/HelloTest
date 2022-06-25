@@ -2,7 +2,7 @@
 
 # Generate report
  report = xcov.produce_report(
-   scheme: 'iOS Test',
+   scheme: 'helloFresh',
    minimum_coverage_percentage: 85.0,
    ignore_file_path: '.xcovignore'
  )
