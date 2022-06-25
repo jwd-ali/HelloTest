@@ -1,7 +1,7 @@
 # Generate report
  report = xcov.produce_report(
    scheme: "helloFresh",
-   minimum_coverage_percentage: 80.0,
+   minimum_coverage_percentage: 85.0,
    ignore_file_path: '.xcovignore'
  )
 
