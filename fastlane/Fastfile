@@ -42,36 +42,4 @@ desc "Check code coverage"
       verbose: true
     )
   end
-
- ##### Lane to generate HTML unit test coverage on local #####
-  desc("Generating slather test coverage HTML report")
-  lane :slather_html_report do
-    slather(
-      scheme: PROJECT_SCHEME,
-      output_directory: "fastlane/slather_output",
-      html: true,
-      ignore: [
-        "iOS\ Test/Utilities/**",
-        "iOS\ Test/ResponseModels/**",
-        "vendor/*",
-	"UIImage**",
-	"UIView**",
-	"Operations.swift",
-	"UITableView**",
-        "**Builder.swift",
-	"**Error.swift",
-        "**Factory.swift",
-        "**Resource.swift",
-        "**Response.swift",
-        "**Controller.swift",
-        "**Cell.swift",
-        "**Event.swift",
-        "**Router.swift",
-        "**FlowLayout.swift",
-        "**Channel.swift",
-        "**View.swift",
-        "**Communication.swift"
-      ]
-    )
-  end
 end

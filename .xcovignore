@@ -1,0 +1,15 @@
+- iOS\ Test/Utilities
+- iOS\ Test/ResponseModels
+
+- .*Builder.swift
+- .*Factory.swift
+- .*Resource.swift
+- .*Response.swift
+- .*Controller.swift
+- .*Cell.swift
+- .UIView**
+- .UITableView**
+- .*Event.swift
+- .*Router.swift
+- .*View.swift
+- .Operations.swift
