@@ -39,14 +39,15 @@ jobs:
     - name: Build and test
       run: bundle exec fastlane test generate_xcodebuild_log:true
 
+    - name: Coveralls GitHub Action
+      uses: coverallsapp/github-action@1.1.3
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v2
       
     - name: Check coverage
       run: bundle exec fastlane check_coverage
 
-    - name: Coveralls GitHub Action
-      uses: coverallsapp/github-action@1.1.3
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
 
