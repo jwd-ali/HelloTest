@@ -42,4 +42,11 @@ desc "Check code coverage"
       verbose: true
     )
   end
+
+desc "lcov report"
+  lane: generate_lcove_report
+    lcov(
+      project_name: "iOS Test",
+      scheme: PROJECT_SCHEME,
+    )
 end
