@@ -22,6 +22,8 @@ jobs:
         fetch-depth: 100
     - name: Install XCPretty
       run: gem install xcpretty
+
+    - name: Install lcov
       run: brew install lcov
       
     - uses: webfactory/ssh-agent@v0.4.1
