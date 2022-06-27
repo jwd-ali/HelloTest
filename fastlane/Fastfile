@@ -47,7 +47,6 @@ desc "Check code coverage"
 
 desc "lcov report"
   lane :generate_lcove_report do
-    generate_xcov_json_report()
     lcov(
       project_name: 'iOS Test',
       scheme: PROJECT_SCHEME,
