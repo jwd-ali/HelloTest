@@ -39,6 +39,14 @@ Check code coverage
 
 lcov report
 
+### ios slather_html_report
+
+```sh
+[bundle exec] fastlane ios slather_html_report
+```
+
+Generating slather test coverage HTML report
+
 ----
 
 This README.md is auto-generated and will be re-generated every time [_fastlane_](https://fastlane.tools) is run.
