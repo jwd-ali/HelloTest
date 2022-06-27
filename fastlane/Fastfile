@@ -59,7 +59,8 @@ desc "lcov report"
       scheme: PROJECT_SCHEME,
       ignore_file_path: '.xcovignore',
       json_report: true,
-      html_report: false
+      html_report: false,
+      output_directory: 'fastlane/xcov_output'
     )
   end
 
