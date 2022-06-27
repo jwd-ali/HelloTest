@@ -47,7 +47,8 @@ desc "lcov report"
   lane :generate_lcove_report do
     lcov(
       project_name: 'iOS Test',
-      scheme: PROJECT_SCHEME
+      scheme: PROJECT_SCHEME,
+      arch: "x86_64"
     )
   end
 
