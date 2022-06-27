@@ -47,7 +47,7 @@ desc "lcov report"
   lane :generate_lcove_report do
     brew install lcov
     lcov(
-      project_name: "iOS Test",
+      project_name: 'iOS Test',
       scheme: PROJECT_SCHEME
     )
   end
