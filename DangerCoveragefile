@@ -3,8 +3,6 @@ SCHEME = 'helloFresh'
  report = xcov.produce_report(
    minimum_coverage_percentage: 82.0,
    ignore_file_path: '.xcovignore',
-   coveralls_service_name: 'github action',
-   coveralls_service_job_id: '1234',
    scheme: SCHEME
  )
 
