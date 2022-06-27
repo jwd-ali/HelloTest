@@ -31,13 +31,13 @@ Test Project
 
 Check code coverage
 
-### ios slather_html_report
+### ios generate_lcove_report
 
 ```sh
-[bundle exec] fastlane ios slather_html_report
+[bundle exec] fastlane ios generate_lcove_report
 ```
 
-Generating slather test coverage HTML report
+lcov report
 
 ----
 

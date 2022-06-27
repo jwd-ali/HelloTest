@@ -40,7 +40,7 @@ jobs:
       run: bundle exec fastlane test generate_xcodebuild_log:true
 
     - name generate lcov report
-      run: bundle exec fastlane generate_lcove_report
+      run: bundle exec fastlane check_coverage
 
     - name: Check coverage
       run: bundle exec fastlane check_coverage
