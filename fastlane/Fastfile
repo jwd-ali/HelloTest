@@ -31,6 +31,8 @@ platform :ios do
       device: TEST_DEVICE,
       code_coverage: true
     )
+   generate_xcov_json_report()
+   slather_html_report()
   end
 
 desc "Check code coverage"
