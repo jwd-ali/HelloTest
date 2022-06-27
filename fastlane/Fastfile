@@ -52,4 +52,38 @@ desc "lcov report"
     )
   end
 
+  ##### Lane to generate HTML unit test coverage on local #####
+  desc("Generating slather test coverage HTML report")
+  lane :slather_html_report do
+    slather(
+      scheme: PROJECT_SCHEME,
+      proj: 'iOS Test.xcodeproj',
+      output_directory: "fastlane/slather_output",
+      html: true,
+      ignore: [
+        "iOS Test/Utilities/**",
+        "iOS Test/ResponseModels/**",
+        "iOS Test/Extensions/**",
+        "iOS Test/Extensions/UIImageView+Extension.swift",
+        "iOS Test/Extensions/UITableView+CellRegistration.swift",
+        "**Builder.swift",
+        "**Factory.swift",
+        "**Resource.swift",
+        "**Response.swift",
+        "**Controller.swift",
+        "**Cell.swift",
+        "**Event.swift",
+        "**Router.swift",
+        "*ViewModel.swift",
+        "**FlowLayout.swift",
+        "**Channel.swift",
+        "**View.swift",
+        "**Communication.swift",
+        "*Operations.swift",
+        "*Error.swift"
+      ]
+    )
+  end
+
+
 end
