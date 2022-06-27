@@ -45,10 +45,21 @@ desc "Check code coverage"
 
 desc "lcov report"
   lane :generate_lcove_report do
+    generate_xcov_json_report()
     lcov(
       project_name: 'iOS Test',
       scheme: PROJECT_SCHEME,
       arch: "x86_64"
+    )
+  end
+
+ ##### Private lane to generate unit test coverage JSON report #####
+  private_lane :generate_xcov_json_report do
+    xcov(
+      scheme: PROJECT_SCHEME,
+      ignore_file_path: '.xcovignore',
+      json_report: true,
+      html_report: false
     )
   end
 
