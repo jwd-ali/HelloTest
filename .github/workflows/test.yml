@@ -22,6 +22,8 @@ jobs:
         fetch-depth: 100
     - name: Install XCPretty
       run: gem install xcpretty
+      run: brew install lcov
+      
     - uses: webfactory/ssh-agent@v0.4.1
       with:
         ssh-private-key: ${{ secrets.SSH_GITHUB_ACTIONS }}
