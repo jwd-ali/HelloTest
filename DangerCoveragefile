@@ -5,7 +5,6 @@ SCHEME = 'helloFresh'
    ignore_file_path: '.xcovignore',
    coveralls_service_name: 'github action',
    coveralls_service_job_id: '1234',
-   coveralls_repo_token: '4sL58vzB0A5T4iB8ox0Il93lpAmfVxKQH',
    scheme: SCHEME
  )
 
