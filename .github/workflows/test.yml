@@ -47,7 +47,7 @@ jobs:
       uses: codecov/codecov-action@v2
       with:
         token: "37d6ab8b-69f3-4625-84c9-d102a96856ef"
-        files: ./report.json
-        directory: ./fastlane/xcov_output/
+        files: report.json
+        directory: fastlane/xcov_output/
 
 
