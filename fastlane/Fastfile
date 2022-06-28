@@ -70,7 +70,7 @@ desc "lcov report"
     slather(
       scheme: PROJECT_SCHEME,
       proj: 'iOS Test.xcodeproj',
-      json: true,
+      cobertura_xml: true,
       output_directory: "fastlane/slather_output",
       ignore: [
         "iOS Test/Utilities/**",
