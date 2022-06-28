@@ -31,7 +31,7 @@ platform :ios do
       device: TEST_DEVICE,
       code_coverage: true
     )
-   generate_xcov_json_report()
+    slather_report()
   end
 
 desc "Check code coverage"
@@ -66,12 +66,12 @@ desc "lcov report"
 
   ##### Lane to generate HTML unit test coverage on local #####
   desc("Generating slather test coverage HTML report")
-  lane :slather_html_report do
+  lane :slather_report do
     slather(
       scheme: PROJECT_SCHEME,
       proj: 'iOS Test.xcodeproj',
+      json: true,
       output_directory: "fastlane/slather_output",
-      html: true,
       ignore: [
         "iOS Test/Utilities/**",
         "iOS Test/ResponseModels/**",
@@ -92,7 +92,10 @@ desc "lcov report"
         "**View.swift",
         "**Communication.swift",
         "*Operations.swift",
-        "*Error.swift"
+        "*Error.swift",
+	"../**/*/SDWebImage/*",
+	"../**/*/SourcePackages/*",
+         “Frameworks/*"
       ]
     )
   end

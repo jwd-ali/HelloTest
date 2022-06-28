@@ -39,10 +39,10 @@ Check code coverage
 
 lcov report
 
-### ios slather_html_report
+### ios slather_report
 
 ```sh
-[bundle exec] fastlane ios slather_html_report
+[bundle exec] fastlane ios slather_report
 ```
 
 Generating slather test coverage HTML report

@@ -48,7 +48,7 @@ jobs:
       with:
         token: "37d6ab8b-69f3-4625-84c9-d102a96856ef"
         files: report.json
-        directory: fastlane/xcov_output/
+        directory: fastlane/slather_output/
         flags: unittests
         name: codecov-umbrella
         fail_ci_if_error: true # optional (default = false)
