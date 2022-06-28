@@ -1,5 +1,6 @@
 # HelloFresh Dev Team - Mobile iOS Developer Test
 ![example workflow](https://github.com/jwd-ali/HelloTest/actions/workflows/test.yml/badge.svg)
+[![codecov](https://codecov.io/gh/jwd-ali/HelloTest/branch/main/graph/badge.svg?token=311YAZ27H7)](https://codecov.io/gh/jwd-ali/HelloTest)
 
 Hello! Thank you for taking the time to try our iOS test. The goal of the test is to assess your coding and design skills.
 
