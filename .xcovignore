@@ -1,0 +1,18 @@
+- iOS Test/Utilities
+- iOS Test/ResponseModels
+- iOS Test/Extensions
+- iOS Test/Extensions/UIImageView+Extension.swift
+- iOS Test/Extensions/UITableView+CellRegistration.swift
+
+- .*Builder.swift
+- .*Factory.swift
+- .*Resource.swift
+- .*Response.swift
+- .*Controller.swift
+- .*Cell.swift
+- .*Event.swift
+- .*Router.swift
+- .*View.swift
+- .*ViewModel.swift
+- .*Error.swift
+- .*Operations.swift

@@ -1,0 +1,22 @@
+# Generate report
+SCHEME = 'helloFresh'
+ report = xcov.produce_report(
+   minimum_coverage_percentage: 82.0,
+   ignore_file_path: '.xcovignore',
+   scheme: SCHEME
+ )
+
+
+# Post warning message
+coverage = (report.coverage * 100).round(2)
+if coverage < 82.0
+  difference = (82.0 - coverage).round(2)
+  warn "Coverage is decreasing by #{difference}. New coverage: #{coverage}%, Previous coverage: #{82.0}%"
+end
+
+# For more information on how this works and how to display an error
+# instead of a warning and fail the PR, please check:
+# https://confluence.deliveryhero.com/x/XQb6Fg
+
+ # Post markdown report
+ xcov.output_report(report)

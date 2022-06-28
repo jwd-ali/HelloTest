@@ -1,0 +1,104 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+TEST_DEVICE="iPhone 13"
+TEST_IOS_VERSION="15.0"
+
+PROJECT_SCHEME="helloFresh"
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Test Project"
+  lane :test do
+    scan(
+      scheme: PROJECT_SCHEME,
+      clean: false,
+      device: TEST_DEVICE,
+      code_coverage: true
+    )
+    slather_report()
+  end
+
+desc "Check code coverage"
+  lane :check_coverage do
+    danger(
+      danger_id: 'coverage-threshold',
+      dangerfile: 'DangerCoveragefile',
+      github_api_token: ENV['DANGER_GITHUB_API_TOKEN'],
+      verbose: true
+    )
+  end
+
+desc "lcov report"
+  lane :generate_lcove_report do
+    lcov(
+      project_name: 'iOS Test',
+      scheme: PROJECT_SCHEME,
+      arch: "x86_64"
+    )
+  end
+
+ ##### Private lane to generate unit test coverage JSON report #####
+  private_lane :generate_xcov_json_report do
+    xcov(
+      scheme: PROJECT_SCHEME,
+      ignore_file_path: '.xcovignore',
+      json_report: true,
+      html_report: false,
+      output_directory: 'fastlane/xcov_output'
+    )
+  end
+
+  ##### Lane to generate HTML unit test coverage on local #####
+  desc("Generating slather test coverage HTML report")
+  lane :slather_report do
+    slather(
+      scheme: PROJECT_SCHEME,
+      proj: 'iOS Test.xcodeproj',
+      cobertura_xml: true,
+      output_directory: "fastlane/slather_output",
+      ignore: [
+        "iOS Test/Utilities/**",
+        "iOS Test/ResponseModels/**",
+        "iOS Test/Extensions/**",
+        "iOS Test/Extensions/UIImageView+Extension.swift",
+        "iOS Test/Extensions/UITableView+CellRegistration.swift",
+        "**Builder.swift",
+        "**Factory.swift",
+        "**Resource.swift",
+        "**Response.swift",
+        "**Controller.swift",
+        "**Cell.swift",
+        "**Event.swift",
+        "**Router.swift",
+        "**ViewModel.swift",
+        "**FlowLayout.swift",
+        "**Channel.swift",
+        "**View.swift",
+        "**Communication.swift",
+        "**Operations.swift",
+        "**Error.swift",
+	"../**/*/SDWebImage/*",
+	"../**/*/SourcePackages/*",
+         “Frameworks/*"
+      ]
+    )
+  end
+
+
+end

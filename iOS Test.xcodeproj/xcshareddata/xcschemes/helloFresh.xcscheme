@@ -27,7 +27,18 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES">
+      codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "YES"
+      localizableStringsDataGatheringEnabled = "YES">
+      <CodeCoverageTargets>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "9BA04B4D25AE681B00E1EA67"
+            BuildableName = "iOS Test.app"
+            BlueprintName = "iOS Test"
+            ReferencedContainer = "container:iOS Test.xcodeproj">
+         </BuildableReference>
+      </CodeCoverageTargets>
       <Testables>
          <TestableReference
             skipped = "NO"
@@ -37,16 +48,6 @@
                BlueprintIdentifier = "9BA04B9025AE68AF00E1EA67"
                BuildableName = "Unit Tests.xctest"
                BlueprintName = "Unit Tests"
-               ReferencedContainer = "container:iOS Test.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9BA04BA025AE68C000E1EA67"
-               BuildableName = "UI Tests.xctest"
-               BlueprintName = "UI Tests"
                ReferencedContainer = "container:iOS Test.xcodeproj">
             </BuildableReference>
          </TestableReference>
