@@ -54,4 +54,7 @@ jobs:
         fail_ci_if_error: true # optional (default = false)
         verbose: true # optional (default = false)
 
+    - name: check coverage
+      run: bundle exec fastlane check_coverage
+
 
