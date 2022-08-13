@@ -1,5 +1,5 @@
 import Foundation
-final class RecipeModulePresentor<View: RecipeModuleView> {
+final class RecipeModulePresenter<View: RecipeModuleView> {
   private let screenTitle = "Recipes"
 
   // MARK:- Properties
@@ -31,7 +31,7 @@ final class RecipeModulePresentor<View: RecipeModuleView> {
 
 }
 
-extension RecipeModulePresentor: RecipeModulePresenting {
+extension RecipeModulePresenter: RecipeModulePresenting {
   func onViewDidLoad() {
     view?.updateTitle(title: screenTitle)
     getRecipes(mapper: mapper) { [weak self] (result) in
@@ -46,27 +46,10 @@ extension RecipeModulePresentor: RecipeModulePresenting {
 
   func onSelect(indexPath: IndexPath, recipe: RecipeCellViewModelType) {
     var getRecipe = recipe
-    getRecipe.isSelected = checker.isMaximumCountReach(isSelected: getRecipe.isSelected)
-    if checker.isMaximumCountReach(isSelected: getRecipe.isSelected) {
-    view?.updateRecipe(at: indexPath, with: getRecipe)
+    let canSelect = checker.isMaximumCountReach(isSelected: getRecipe.isSelected)
+    if canSelect {
+      getRecipe.isSelected = canSelect
+      view?.updateRecipe(at: indexPath, with: getRecipe)
     }
-  }
-}
-
-protocol CountChecking {
-  mutating func isMaximumCountReach(isSelected: Bool)-> Bool
-}
-
-struct CountChecker: CountChecking {
-  private var selectedCount: Int = 0
-  private let maxCount = 5
-
- mutating func isMaximumCountReach(isSelected: Bool)-> Bool {
-    if selectedCount < maxCount || !isSelected  {
-      selectedCount = isSelected ? (selectedCount + 1) : (selectedCount - 1)
-      return false
-    }
-
-    return false
   }
 }

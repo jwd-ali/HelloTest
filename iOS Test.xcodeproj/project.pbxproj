@@ -11,6 +11,9 @@
 		9BA04B5425AE681B00E1EA67 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA04B5325AE681B00E1EA67 /* SceneDelegate.swift */; };
 		9BA04B5B25AE681B00E1EA67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BA04B5A25AE681B00E1EA67 /* Assets.xcassets */; };
 		9BA04BA425AE68C000E1EA67 /* UI_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA04BA325AE68C000E1EA67 /* UI_Tests.swift */; };
+		E30B36BE28A8132300C1C422 /* CountCheckerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30B36BD28A8132300C1C422 /* CountCheckerTests.swift */; };
+		E30B36C028A817ED00C1C422 /* CounterCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30B36BF28A817EC00C1C422 /* CounterCheck.swift */; };
+		E30B36C228A81C8D00C1C422 /* RecipeModulePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30B36C128A81C8D00C1C422 /* RecipeModulePresenterTests.swift */; };
 		E3DD547526C8F9B50013BCF3 /* RecipeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DD547426C8F9B50013BCF3 /* RecipeService.swift */; };
 		E3DD547E26C8FA7B0013BCF3 /* Decodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DD547D26C8FA7B0013BCF3 /* Decodable+Extension.swift */; };
 		E3DD548726C8FB690013BCF3 /* RecipeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DD548626C8FB690013BCF3 /* RecipeResponse.swift */; };
@@ -22,7 +25,7 @@
 		E3DD54BA26C90E6B0013BCF3 /* RecipeModuleInteracting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DD54B926C90E6B0013BCF3 /* RecipeModuleInteracting.swift */; };
 		E3DD54C226C90E760013BCF3 /* RecipeModuleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DD54C126C90E760013BCF3 /* RecipeModuleInteractor.swift */; };
 		E3DD54C826C90EDE0013BCF3 /* RecipeModulePresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DD54C726C90EDE0013BCF3 /* RecipeModulePresenting.swift */; };
-		E3DD54CD26C90EEA0013BCF3 /* RecipeModulePresentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DD54CC26C90EEA0013BCF3 /* RecipeModulePresentor.swift */; };
+		E3DD54CD26C90EEA0013BCF3 /* RecipeModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DD54CC26C90EEA0013BCF3 /* RecipeModulePresenter.swift */; };
 		E3DD54D326C90F760013BCF3 /* RecipeModuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DD54D226C90F760013BCF3 /* RecipeModuleView.swift */; };
 		E3DD54DB26C90FDA0013BCF3 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DD54DA26C90FDA0013BCF3 /* RecipeViewController.swift */; };
 		E3DD54E126C9252E0013BCF3 /* RecipeRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DD54E026C9252E0013BCF3 /* RecipeRouting.swift */; };
@@ -78,6 +81,9 @@
 		9BA04BA125AE68C000E1EA67 /* UI Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UI Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BA04BA325AE68C000E1EA67 /* UI_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI_Tests.swift; sourceTree = "<group>"; };
 		9BA04BA525AE68C000E1EA67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E30B36BD28A8132300C1C422 /* CountCheckerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountCheckerTests.swift; sourceTree = "<group>"; };
+		E30B36BF28A817EC00C1C422 /* CounterCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterCheck.swift; sourceTree = "<group>"; };
+		E30B36C128A81C8D00C1C422 /* RecipeModulePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModulePresenterTests.swift; sourceTree = "<group>"; };
 		E3DD547426C8F9B50013BCF3 /* RecipeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeService.swift; sourceTree = "<group>"; };
 		E3DD547D26C8FA7B0013BCF3 /* Decodable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decodable+Extension.swift"; sourceTree = "<group>"; };
 		E3DD548626C8FB690013BCF3 /* RecipeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeResponse.swift; sourceTree = "<group>"; };
@@ -89,7 +95,7 @@
 		E3DD54B926C90E6B0013BCF3 /* RecipeModuleInteracting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModuleInteracting.swift; sourceTree = "<group>"; };
 		E3DD54C126C90E760013BCF3 /* RecipeModuleInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModuleInteractor.swift; sourceTree = "<group>"; };
 		E3DD54C726C90EDE0013BCF3 /* RecipeModulePresenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModulePresenting.swift; sourceTree = "<group>"; };
-		E3DD54CC26C90EEA0013BCF3 /* RecipeModulePresentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModulePresentor.swift; sourceTree = "<group>"; };
+		E3DD54CC26C90EEA0013BCF3 /* RecipeModulePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModulePresenter.swift; sourceTree = "<group>"; };
 		E3DD54D226C90F760013BCF3 /* RecipeModuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModuleView.swift; sourceTree = "<group>"; };
 		E3DD54DA26C90FDA0013BCF3 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		E3DD54E026C9252E0013BCF3 /* RecipeRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRouting.swift; sourceTree = "<group>"; };
@@ -198,6 +204,15 @@
 			path = "UI Tests";
 			sourceTree = "<group>";
 		};
+		E30B36BC28A8130E00C1C422 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E30B36BD28A8132300C1C422 /* CountCheckerTests.swift */,
+				E30B36C128A81C8D00C1C422 /* RecipeModulePresenterTests.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		E3DD546026C8ED510013BCF3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,7 +315,8 @@
 			isa = PBXGroup;
 			children = (
 				E3DD54C726C90EDE0013BCF3 /* RecipeModulePresenting.swift */,
-				E3DD54CC26C90EEA0013BCF3 /* RecipeModulePresentor.swift */,
+				E30B36BF28A817EC00C1C422 /* CounterCheck.swift */,
+				E3DD54CC26C90EEA0013BCF3 /* RecipeModulePresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -396,6 +412,7 @@
 		E3DD55B026CAACB60013BCF3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E30B36BC28A8130E00C1C422 /* Presenter */,
 				E3DD55B126CAACC50013BCF3 /* RecipeView */,
 			);
 			path = View;
@@ -559,7 +576,8 @@
 				E3DD554926C985980013BCF3 /* UITableView+CellRegistration.swift in Sources */,
 				E3DD54E126C9252E0013BCF3 /* RecipeRouting.swift in Sources */,
 				E3DD548726C8FB690013BCF3 /* RecipeResponse.swift in Sources */,
-				E3DD54CD26C90EEA0013BCF3 /* RecipeModulePresentor.swift in Sources */,
+				E3DD54CD26C90EEA0013BCF3 /* RecipeModulePresenter.swift in Sources */,
+				E30B36C028A817ED00C1C422 /* CounterCheck.swift in Sources */,
 				9BA04B5425AE681B00E1EA67 /* SceneDelegate.swift in Sources */,
 				E3DD54C826C90EDE0013BCF3 /* RecipeModulePresenting.swift in Sources */,
 				E3DD558226CA6C860013BCF3 /* UIViewController+Extension.swift in Sources */,
@@ -585,6 +603,8 @@
 				E3DD55B326CAACDF0013BCF3 /* MockRecipeCellViewModel.swift in Sources */,
 				E3DD559126CA92BD0013BCF3 /* Decodable+ExtensionTests.swift in Sources */,
 				E3DD559926CA96B00013BCF3 /* Float+ExtensionTests.swift in Sources */,
+				E30B36C228A81C8D00C1C422 /* RecipeModulePresenterTests.swift in Sources */,
+				E30B36BE28A8132300C1C422 /* CountCheckerTests.swift in Sources */,
 				E3DD558826CA8F2B0013BCF3 /* RecipeResponseModelMapperTests.swift in Sources */,
 				E3DD55A526CAA28A0013BCF3 /* RecipeServiceTests.swift in Sources */,
 				E3DD55AA26CAA5FA0013BCF3 /* MockRecipeService.swift in Sources */,

@@ -16,6 +16,4 @@ class MockRecipeCellViewModel: RecipeCellViewModeling {
   func toggleSelected() {
     isSelected.toggle()
   }
-
-  
 }
