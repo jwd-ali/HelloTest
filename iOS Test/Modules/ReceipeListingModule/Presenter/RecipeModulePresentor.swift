@@ -43,7 +43,7 @@ extension RecipeModulePresentor: RecipeModulePresenting {
 
   func onSelect(indexPath: IndexPath, recipe: RecipeCellViewModelType) {
     var getRecipe = recipe
-    getRecipe.toogleSelected()
+    getRecipe.toggleSelected()
     if selectedCount < maxCount || !getRecipe.isSelected  {
       selectedCount = getRecipe.isSelected ? (selectedCount + 1) : (selectedCount - 1)
       view?.updateRecipe(at: indexPath, with: getRecipe)

@@ -6,7 +6,7 @@ struct RecipeResponseModelMapper: RecipeResponseModelMapping {
       name: model.recipeName,
       headline: model.recipeHeadline,
       image: model.imageURL,
-      preprationTime: model.preprationTime
+      preparationTime: model.preprationTime
     )
   }
 

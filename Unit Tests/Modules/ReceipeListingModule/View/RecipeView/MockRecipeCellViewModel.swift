@@ -9,11 +9,11 @@ class MockRecipeCellViewModel: RecipeCellViewModeling {
 
   var image: URL = URL(string: "https://img.hellofresh.com/f_auto,q_auto/hellofresh_s3/image/53314247ff604d44808b4569.jpg")!
 
-  var preprationTime: Float = 45
+  var preparationTime: Float = 45
 
   var isSelected: Bool = false
 
-  func toogleSelected() {
+  func toggleSelected() {
     isSelected.toggle()
   }
 

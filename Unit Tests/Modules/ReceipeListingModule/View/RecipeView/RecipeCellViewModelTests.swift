@@ -14,14 +14,14 @@ class RecipeCellViewModelTests: XCTestCase {
 
   func testSelectionOfModel() {
     let notSelected = sut.isSelected
-    sut.toogleSelected()
+    sut.toggleSelected()
     let selected = sut.isSelected
     XCTAssertNotEqual(notSelected, selected)
   }
 
   func testRecipeCellSetGet() {
     XCTAssertEqual(sut.name, "pizza")
-    XCTAssertEqual(sut.preprationTime, 45)
+    XCTAssertEqual(sut.preparationTime, 45)
     XCTAssertEqual(sut.id, "6")
   }
 }
