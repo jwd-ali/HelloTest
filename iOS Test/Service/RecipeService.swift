@@ -6,7 +6,7 @@ class RecipeService: RecipeServicing {
         loader = fileLoader
     }
 
-    func getRecepies<T: Decodable>(completion:@escaping ServiceResult<T>) {
+    func getRecipes<T: Decodable>(completion:@escaping ServiceResult<T>) {
         do {
             let recepies = try T.parse(fileName: loader.fileName, fileType: loader.fileType, bundle: loader.bundle)
             completion(.success(recepies))

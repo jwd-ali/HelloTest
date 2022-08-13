@@ -9,7 +9,6 @@ protocol RecipeCellViewModeling  {
   var image: URL { get }
   var preparationTime: Float { get }
   var isSelected: Bool { get set }
-  mutating func toggleSelected()
 }
 
 struct RecipeCellViewModel: RecipeCellViewModelType {
@@ -20,8 +19,4 @@ struct RecipeCellViewModel: RecipeCellViewModelType {
   let image: URL
   let preparationTime: Float
   var isSelected: Bool = false
-
-  mutating func toggleSelected() {
-    isSelected.toggle()
-  }
 }

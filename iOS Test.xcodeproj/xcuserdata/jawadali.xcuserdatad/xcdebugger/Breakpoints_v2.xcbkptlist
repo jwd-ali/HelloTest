@@ -14,8 +14,8 @@
             filePath = "iOS Test/Modules/ReceipeListingModule/Presenter/RecipeModulePresentor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "onSelect(indexPath:recipe:)"
             landmarkType = "7">
          </BreakpointContent>

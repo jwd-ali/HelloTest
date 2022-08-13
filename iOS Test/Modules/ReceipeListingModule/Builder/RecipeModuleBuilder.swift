@@ -24,7 +24,8 @@ class RecipeModuleBuilder: RecipeModuleBuilding {
     let presenter = RecipeModulePresentor<RecipeViewController>(
       interactor: interactor,
       router: router,
-      mapper: mapper
+      mapper: mapper,
+      checking: CountChecker()
     )
     let controller = RecipeViewController(
       presenter: presenter

@@ -8,6 +8,6 @@ class RecipeModuleInteractor: RecipeModuleInteracting {
   }
 
   func recipeList(completion: @escaping (Result<[RecipeResponse], ServiceError>)-> Void) {
-    service.getRecepies(completion: completion)
+    service.getRecipes(completion: completion)
   }
 }
