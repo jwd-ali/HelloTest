@@ -7,9 +7,8 @@ protocol RecipeCellViewModeling  {
   var name: String { get }
   var headline: String { get }
   var image: URL { get }
-  var preprationTime: Float { get }
+  var preparationTime: Float { get }
   var isSelected: Bool { get set }
-  mutating func toogleSelected()
 }
 
 struct RecipeCellViewModel: RecipeCellViewModelType {
@@ -18,10 +17,6 @@ struct RecipeCellViewModel: RecipeCellViewModelType {
   let name: String
   let headline: String
   let image: URL
-  let preprationTime: Float
+  let preparationTime: Float
   var isSelected: Bool = false
-
-  mutating func toogleSelected() {
-    isSelected.toggle()
-  }
 }

@@ -13,7 +13,7 @@ class RecipeServiceTests: XCTestCase {
     let fileLoader = FileLoader(fileName: "recipes", bundle:Bundle.main , fileType: "json")
     var results: Result<[RecipeResponse], ServiceError>?
     sut = RecipeService(fileLoader: fileLoader)
-    sut.getRecepies { (result: Result<[RecipeResponse], ServiceError>) in
+    sut.getRecipes { (result: Result<[RecipeResponse], ServiceError>) in
       results = result
     }
 
@@ -26,7 +26,7 @@ class RecipeServiceTests: XCTestCase {
   func testCorruptedDataCase() {
     sut = MockRecipeServiceCorruptedData()
     var results: Result<[RecipeResponse], ServiceError>?
-    sut.getRecepies { (result: Result<[RecipeResponse], ServiceError>) in
+    sut.getRecipes { (result: Result<[RecipeResponse], ServiceError>) in
       results = result
     }
     XCTAssertThrowsError(try results?.get()) { error in

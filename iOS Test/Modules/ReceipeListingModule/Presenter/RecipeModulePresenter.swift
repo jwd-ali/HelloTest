@@ -1,5 +1,5 @@
 import Foundation
-final class RecipeModulePresentor<View: RecipeModuleView> {
+final class RecipeModulePresenter<View: RecipeModuleView> {
   private let screenTitle = "Recipes"
 
   // MARK:- Properties
@@ -9,15 +9,18 @@ final class RecipeModulePresentor<View: RecipeModuleView> {
   weak var view: View?
   private var selectedCount: Int = 0
   private let maxCount = 5
+  private var checker: CountChecking
   // MARK: - initializer
   init(
     interactor: RecipeModuleInteracting,
     router: RecipeRouting,
-    mapper: RecipeResponseModelMapping
+    mapper: RecipeResponseModelMapping,
+    checking: CountChecking
   ) {
     self.interactor = interactor
     self.router = router
     self.mapper = mapper
+    self.checker = checking
   }
 
   private func getRecipes(mapper: RecipeResponseModelMapping, completion:@escaping (Result<[RecipeCellViewModelType], ServiceError>) -> Void ) {
@@ -28,24 +31,24 @@ final class RecipeModulePresentor<View: RecipeModuleView> {
 
 }
 
-extension RecipeModulePresentor: RecipeModulePresenting {
+extension RecipeModulePresenter: RecipeModulePresenting {
   func onViewDidLoad() {
     view?.updateTitle(title: screenTitle)
     getRecipes(mapper: mapper) { [weak self] (result) in
       switch result {
-        case .failure(let error):
-          self?.view?.showErrorMessage(errorMessage: error.localizedDescription)
-        case .success(let recipes):
-          self?.view?.updateView(recipeViewModels: recipes)
+      case .failure(let error):
+        self?.view?.showErrorMessage(errorMessage: error.localizedDescription)
+      case .success(let recipes):
+        self?.view?.updateView(recipeViewModels: recipes)
       }
     }
   }
 
   func onSelect(indexPath: IndexPath, recipe: RecipeCellViewModelType) {
     var getRecipe = recipe
-    getRecipe.toogleSelected()
-    if selectedCount < maxCount || !getRecipe.isSelected  {
-      selectedCount = getRecipe.isSelected ? (selectedCount + 1) : (selectedCount - 1)
+    let canSelect = checker.isMaximumCountReach(isSelected: getRecipe.isSelected)
+    if canSelect {
+      getRecipe.isSelected = canSelect
       view?.updateRecipe(at: indexPath, with: getRecipe)
     }
   }

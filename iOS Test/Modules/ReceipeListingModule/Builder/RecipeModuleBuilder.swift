@@ -21,10 +21,11 @@ class RecipeModuleBuilder: RecipeModuleBuilding {
       service: service
     )
     let router = RecipeRouter()
-    let presenter = RecipeModulePresentor<RecipeViewController>(
+    let presenter = RecipeModulePresenter<RecipeViewController>(
       interactor: interactor,
       router: router,
-      mapper: mapper
+      mapper: mapper,
+      checking: CountChecker()
     )
     let controller = RecipeViewController(
       presenter: presenter

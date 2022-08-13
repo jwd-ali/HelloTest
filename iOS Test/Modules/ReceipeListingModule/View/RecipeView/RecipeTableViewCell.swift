@@ -84,7 +84,7 @@ final class RecipeTableViewCell: ReusableTableViewCell {
     guard let viewModel = viewModel as? RecipeCellViewModelType else { return }
     recipeNameLabel.text = viewModel.name
     headlineLabel.text = viewModel.headline
-    minutesLabel.text = viewModel.preprationTime.minutesString
+    minutesLabel.text = viewModel.preparationTime.minutesString
     recipeImageView.loadImage(with: viewModel.image, showsIndicator: true)
     isRecipeSelected = viewModel.isSelected
   }
